@@ -1,0 +1,152 @@
+/* mettre . pour les class */
+/* mettre # pour les id */
+
+
+/* Style général pour le corps de la page */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8fafd;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style pour la bannière */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#fond-intro {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 90;
+  left: 0;
+  z-index: 1;
+}
+
+#photo-martin {
+  z-index: 2;
+
+  height: 200px;
+
+  top: 70%;
+  left: 30%;
+  transform: translate(-90%, 25%);
+
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+/* Style pour la section d'introduction */
+.intro {
+  width: 55%;
+  max-width: 1200px;
+  padding: 20px;
+  text-align:justify;
+  margin: 20px 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.intro h1 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #000;
+  text-align: center;
+  /* Couleur bleue pour le titre */
+}
+
+.core_message .bloc_text p {
+  font-style: italic;
+  font-size: 14px;
+  color: rgba(120, 119, 116, 1);
+  margin-bottom: 15px;
+}
+
+
+/* Style pour le contenu détaillé */
+.activity-zone {
+  width: 80%;
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  
+}
+
+/* Style pour les blocs d'activités */
+.activity-detail {
+  flex: 1 1 calc(45% - 20px);
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Centre les blocs si moins de deux blocs par ligne */
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s;
+  box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+  min-width: 300px;
+  max-width: 550px;
+}
+
+.activity-detail a {
+  color: #0277bd;
+  /* Couleur bleue pour les liens */
+  text-decoration: none;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.activity-detail p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.activity-detail:hover {
+  transform: translateY(-5px);
+  /* Effet de survol */
+}
+
+.activity-text {
+  border: 1.5px solid #9da0a1;
+  border-radius: 2%;
+  box-shadow: 0 2px 5px rgba(112, 111, 111, 0.1);
+  padding: 10px;
+
+}
+
+aside {
+  margin-left: 10px;
+}
+
+#link-linkedin {
+  font-size: 13px;
+  color: #0277bd;
+}
+
+#retour {
+  font-size: 13px;
+  font-style: italic;
+  color: #535557;
+}
