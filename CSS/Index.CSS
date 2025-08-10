@@ -1,20 +1,28 @@
 /* mettre . pour les class */
 /* mettre # pour les id */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap');
+
 
 /* Style général pour le corps de la page */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;          /* Taille standard pour le web */
+  line-height: 1.6;         /* Confort de lecture */
+  color: #444;           /* Gris foncé, moins agressif que le noir pur */
   margin: 0;
   padding: 0;
   background-color: #f8fafd;
-  color: #333;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Style pour la bannière */
+b {
+  font-weight: 500;
+}
+
+/* Style pour la bannière image "fond" et photo profil */
 .banner {
   position: relative;
   width: 100%;
@@ -23,6 +31,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: -110px;
 }
 
 #fond-intro {
@@ -37,21 +46,38 @@ body {
 #photo-martin {
   z-index: 2;
 
+  width: 200px;    
   height: 200px;
-
-  top: 70%;
-  left: 30%;
-  transform: translate(-90%, 25%);
-
   border-radius: 50%;
-  border: 4px solid #fff;
+
+  object-fit: cover;           /* Recadre l’image sans la déformer */
+  object-position: 50% 35%;     /* Centre le visage */
+  margin-right: 20px;          /* Espacement avec le texte */
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-160%, 25%);
+
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  margin-bottom: 20px;
+
+  border: 3px solid #fff;
+  margin-top: -50px;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .photo-martin {
+        width: 150px;
+        height: 150px;
+        float: none;              /* La passe au-dessus du texte */
+        display: block;
+        margin: 0 auto 20px auto; /* Centre la photo */
+    }
 }
 
 /* Style pour la section d'introduction */
 .intro {
-  width: 55%;
+  width: 60%;
   max-width: 1200px;
   padding: 20px;
   text-align:justify;
@@ -62,24 +88,31 @@ body {
 }
 
 .intro h1 {
-  font-size: 25px;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 28px;           /* Desktop */
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  
   margin-bottom: 10px;
-  color: #000;
+  color: #32594b;
   text-align: center;
   /* Couleur bleue pour le titre */
 }
 
-.core_message .bloc_text p {
+.intro_text p {
+  
+  font-size: 16px;
+  color:#333333;
   font-style: italic;
-  font-size: 14px;
-  color: rgba(120, 119, 116, 1);
   margin-bottom: 15px;
+  text-align: center;
 }
 
 
 /* Style pour le contenu détaillé */
 .activity-zone {
-  width: 80%;
+  width: 60%;
   padding: 20px;
   background-color: #fff;
   margin-bottom: 20px;
@@ -109,23 +142,19 @@ body {
 }
 
 .activity-detail a {
-  color: #0277bd;
-  /* Couleur bleue pour les liens */
+  color: #32594b;
   text-decoration: none;
-  font-size: 1.5em;
   margin-bottom: 10px;
   display: block;
 }
 
 .activity-detail p {
-  font-size: 13px;
   line-height: 1.5;
   margin-bottom: 10px;
 }
 
 .activity-detail:hover {
-  transform: translateY(-5px);
-  /* Effet de survol */
+  transform: translateY(-5px);   /* Effet de survol */
 }
 
 .activity-text {
@@ -141,12 +170,29 @@ aside {
 }
 
 #link-linkedin {
-  font-size: 13px;
   color: #0277bd;
+  white-space: no-wrap;
+  display: inline;
 }
+
+
+/* Pages annexes */
 
 #retour {
   font-size: 13px;
   font-style: italic;
   color: #535557;
+}
+
+.images-sous-pages {
+  border-radius: 1px solid #000;
+  height: 400px;
+}
+
+.image-gauche {
+  text-align: left;
+}
+
+.image-droite {
+  text-align: right;
 }
