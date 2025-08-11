@@ -22,6 +22,10 @@ b {
   font-weight: 500;
 }
 
+H2 {
+  color: #32594b;
+}
+
 /* Style pour la bannière image "fond" et photo profil */
 .banner {
   position: relative;
@@ -95,9 +99,8 @@ b {
   letter-spacing: 0.5px;
   
   margin-bottom: 10px;
-  color: #32594b;
+  color: #32594b;   /* Couleur verte pour le titre */
   text-align: center;
-  /* Couleur bleue pour le titre */
 }
 
 .intro_text p {
