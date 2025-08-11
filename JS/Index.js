@@ -4,6 +4,5 @@ document.getElementById('button_1').addEventListener('click', function () {
 });
 
 document.getElementById('button_2').addEventListener('click', function () {
-    this.style.display = 'none';
     document.getElementById('button_1').style.display = 'inline-block';
 });

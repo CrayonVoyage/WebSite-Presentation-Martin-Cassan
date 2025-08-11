@@ -69,6 +69,28 @@ H2 {
   display: inline-block;
 }
 
+#logo-labo {
+  z-index: 2;
+
+  width: 200px;    
+  height: 200px;
+  border-radius: 5%;
+
+  object-fit: cover;           /* Recadre l’image sans la déformer */
+  object-position: 50% 35%;     /* Centre le visage */
+  margin-right: 20px;          /* Espacement avec le texte */
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-160%, 25%);
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+  border: 3px solid #fff;
+  margin-top: -50px;
+  display: inline-block;
+}
+
 @media (max-width: 768px) {
     .photo-martin {
         width: 150px;
