@@ -22,13 +22,27 @@
 
     <div class="activity-zone">
         <div class= "button_container">
-            <button class="button_experiment" id="button_1">Effacer</button>
-            <button class="button_experiment" id="button_2">Rien</button> 
+            <button class="button_experiment" id="startButton">Commencer</button>
         </div>
-        <div class= "canvas_container">
-            <canvas id="myCanvas" width="480" height="480"></canvas>
-        </div>
-    </div>
 
+        <div class= "button_container">
+            <button class="button_experiment" id="button_up">Haut</button>
+            <button class="button_experiment" id="button_left">Gauche</button> 
+        </div>
+
+        <div class= "canvas_container">
+            <canvas id="myCanvas1" width="480" height="480"></canvas>
+        </div>
+
+        <div class= "button_container">
+            <button class="button_experiment" id="button_right">Droite</button> 
+            <button class="button_experiment" id="button_down">Bas</button> 
+        </div>
+        
+        <p>
+            Score : 
+            <span id="scoreDisplay"></span>
+        </p>    
+    </div>
 
 </body>
