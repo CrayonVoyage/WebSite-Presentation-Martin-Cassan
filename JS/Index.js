@@ -93,4 +93,6 @@ function draw() {
     console.log(score)
 }
 
+var titleToChange = document.getElementsByClassName('intro')
+console.dir(titleToChange)
 
