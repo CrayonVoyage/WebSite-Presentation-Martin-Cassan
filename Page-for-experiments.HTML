@@ -1,48 +1,57 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Martin Cassan - Reporting & BP</title>
-    <meta name="description"
-        content="Test Tab, to be removed">
-    <link rel="stylesheet" href="CSS/index.CSS">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>2048 — Experiments</title>
+    <meta name="description" content="Simple 2048 game for experiments page">
+    <style>
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:#faf8ef; margin:0; padding:24px; color:#776e65; display:flex; justify-content:center; }
+        .wrap { max-width: 480px; width: 100%; }
+        .header { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:12px; }
+        .title { font-size: 32px; font-weight: 700; }
+        .scorebox { background:#bbada0; color:#fff; border-radius:6px; padding:8px 12px; text-align:center; min-width:84px; }
+        .scorebox .label { font-size:12px; letter-spacing:1px; text-transform:uppercase; opacity:.9; }
+        .scorebox .value { font-size:20px; font-weight:700; }
+        .controls { display:flex; gap:8px; margin:12px 0 16px; }
+        .controls button { flex:1; background:#8f7a66; color:#fff; border:none; border-radius:6px; padding:10px 12px; font-weight:600; cursor:pointer; }
+        .controls button:active { transform: translateY(1px); }
+        .grid { background:#bbada0; padding:10px; border-radius:8px; display:grid; grid-template-columns: repeat(4, 1fr); gap:10px; }
+        .cell { aspect-ratio:1/1; background:#cdc1b4; border-radius:6px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:26px; color:#776e65; }
+        .cell.empty { color: transparent; }
+        /* Basic tile colors */
+        .v2    { background:#eee4da; }
+        .v4    { background:#ede0c8; }
+        .v8    { background:#f2b179; color:#f9f6f2; }
+        .v16   { background:#f59563; color:#f9f6f2; }
+        .v32   { background:#f67c5f; color:#f9f6f2; }
+        .v64   { background:#f65e3b; color:#f9f6f2; }
+        .v128  { background:#edcf72; color:#f9f6f2; font-size:22px; }
+        .v256  { background:#edcc61; color:#f9f6f2; font-size:22px; }
+        .v512  { background:#edc850; color:#f9f6f2; font-size:22px; }
+        .v1024 { background:#edc53f; color:#f9f6f2; font-size:18px; }
+        .v2048 { background:#edc22e; color:#f9f6f2; font-size:18px; }
+        .hint { font-size:12px; opacity:.7; margin-top:10px; }
+    </style>
     <script src="JS/Index.js" defer></script>
-</head>
-
+    </head>
 <body>
-    <div class="banner">
-        <img src="images/banner.jpg" id="fond-intro" alt="fondu couleurs">
+    <div class="wrap" id="game-2048">
+        <div class="header">
+            <div class="title">2048</div>
+            <div class="scorebox">
+                <div class="label">Score</div>
+                <div class="value" id="score">0</div>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="new-game">New game</button>
+            <button id="btn-up">Up</button>
+            <button id="btn-left">Left</button>
+            <button id="btn-right">Right</button>
+            <button id="btn-down">Down</button>
+        </div>
+        <div class="grid" id="grid"></div>
+        <div class="hint">Use arrow keys or buttons to play.</div>
     </div>
-    <img src="images/Logo Experiment.png" id="logo-labo" alt="Logo Labo">
-
-    <div class="intro">
-        <H1>Test for JavaScript</H1>
-    </div>
-
-    <div class="activity-zone">
-        <div class= "button_container">
-            <button class="button_experiment" id="startButton">Commencer</button>
-        </div>
-
-        <div class= "button_container">
-            <button class="button_experiment" id="button_up">Haut</button>
-            <button class="button_experiment" id="button_left">Gauche</button> 
-        </div>
-
-        <div class= "canvas_container">
-            <canvas id="myCanvas1" width="480" height="480"></canvas>
-        </div>
-
-        <div class= "button_container">
-            <button class="button_experiment" id="button_right">Droite</button> 
-            <button class="button_experiment" id="button_down">Bas</button> 
-        </div>
-        
-        <p>
-            Score : 
-            <span id="scoreDisplay"></span>
-        </p>    
-    </div>
-
-</body>
+    </body>
